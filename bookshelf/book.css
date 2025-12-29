@@ -1,0 +1,128 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.base {
+    position: relative;
+    height: 100vh;
+    aspect-ratio: 1920 / 1080;
+}
+
+.draw-layer, .color-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.color-layer {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.color-layer:hover {
+    opacity: 1;
+}
+
+.eng-pen-click-path {
+    clip-path: polygon(82.81% 24.44%, 83.80% 24.54%, 84.90% 24.63%, 85.63% 24.63%, 86.56% 24.72%, 87.45% 24.63%, 88.28% 24.63%, 88.70% 24.91%, 88.96% 26.02%, 88.96% 27.69%, 88.59% 29.07%, 87.92% 29.35%, 88.49% 30.37%, 88.85% 31.39%, 88.65% 32.87%, 88.49% 33.89%, 87.66% 34.26%, 86.67% 34.44%, 85.57% 33.89%, 84.95% 33.80%, 84.27% 33.80%, 83.28% 33.80%, 82.76% 33.43%);
+}
+.eng-left-click-path {
+    clip-path: polygon(16.93% 47.13%, 16.98% 56.57%, 15.73% 56.48%, 14.27% 56.48%, 12.86% 56.30%, 11.82% 55.56%, 10.99% 55.19%, 10.68% 52.87%, 10.68% 50.37%, 11.46% 48.43%, 13.28% 47.59%);
+}
+.eng-right-click-path {
+    clip-path: polygon(82.29% 13.33%, 88.80% 13.80%, 89.27% 15.28%, 89.11% 16.67%, 88.39% 17.96%, 88.96% 19.54%, 89.32% 21.30%, 89.06% 23.24%, 87.55% 23.43%, 85.68% 23.33%, 82.55% 22.78%);
+}
+
+.math-pen-click-path {
+    clip-path: polygon(17.71% 40.93%, 17.60% 42.78%, 16.98% 43.89%, 16.61% 42.04%, 16.72% 27.78%, 17.14% 26.76%, 17.45% 26.02%, 17.76% 24.54%, 18.49% 23.98%, 18.96% 23.98%, 19.43% 25.56%, 19.53% 27.13%, 19.74% 35.28%, 19.79% 40.28%, 19.74% 40.93%, 18.65% 40.93%, 18.49% 52.22%, 19.32% 52.22%, 19.43% 66.30%, 19.38% 70.93%, 19.58% 72.59%, 19.53% 73.98%, 19.53% 75.83%, 18.49% 75.83%, 17.92% 75.19%, 17.71% 67.96%, 17.60% 52.22%, 18.44% 52.13%, 18.70% 40.93%);
+}
+.math-left-click-path {
+    clip-path: polygon(31.72% 80.83%, 31.72% 72.96%, 26.56% 72.13%, 26.56% 80.65%);
+}
+.math-right-click-path {
+    clip-path: polygon(78.49% 28.52%, 78.33% 21.85%, 68.02% 21.76%, 67.97% 28.70%);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal-content {
+    background-color: #fff;
+    border: 3px solid black;
+    min-width: 20%;
+    font-family: 'Mali', cursive;
+    padding: 50px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 2em;
+}
+
+.modal-content input {
+    font-size: 1em;
+    font-family: 'Mali', cursive;
+    padding: 0.5em;
+    box-sizing: border-box;
+    margin-bottom: 2em;
+}
+
+.modal-content button {
+    font-size: 1em;
+    font-family: 'Mali', cursive;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+.modal.active {
+    display: flex;
+}
+
+.paper {
+    background-color: transparent;
+    top: 29%;
+    left: 31%;
+    width: 40%;
+    height: 42%;
+    gap: 20%;
+    position: absolute;
+    display: flex;
+}
+
+.book-page {
+    background-color: transparent;
+    flex: 1;
+    font-family: 'Mali', cursive;
+    overflow: hidden;
+}
+
+.todo-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.todo-checkbox {
+    margin-right: 10px;
+    font-family: serif;
+    user-select: none;
+}

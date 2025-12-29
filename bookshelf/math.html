@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Book</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&family=Mali&family=Sriracha&display=swap">
+    <link rel="stylesheet" href="book.css">
+</head>
+<body>
+    <div class="base">
+        <img src="img/Math/mathbook_line.png" class="draw-layer">
+
+        <img src="img/Math/mathbook_pen.png" class="color-layer math-pen-click-path" onclick="openTodoModal()">
+        <img src="img/Math/mathbook_left.png" class="color-layer math-left-click-path" onclick="prevPage()">
+        <img src="img/Math/mathbook_right.png" class="color-layer math-right-click-path" onclick="nextPage()">
+
+        <div class="paper">
+            <div id="page-left" class="book-page"></div>
+            <div id="page-right" class="book-page"></div>
+        </div>
+    </div>
+
+        
+
+    <div id="todo-modal" class="modal" onclick="closeTodoModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <p>add todo</p>
+            <input type="text" id="todo-input" placeholder="ทบทวนสูตรพีทาโกรัส">
+            <button onclick="addTodo()">write down</button>
+        </div>
+    </div>
+
+    <script src="book.js"></script>
+</body>
+</html>
