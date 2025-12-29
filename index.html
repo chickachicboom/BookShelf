@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookshelf</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Itim&family=Mali&family=Sriracha&display=swap">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <script src="index.js"></script>
+
+    <div class="base">
+        <img src="img/Bookshelf/entire_draw.png" class="draw-layer">
+
+        <img src="img/Bookshelf/homework_color.png" class="color-layer homework-click-path" onclick="openSoon()">
+        <img src="img/Bookshelf/math_color.png" class="color-layer math-click-path" onclick="window.location.href='math.html'">
+        <img src="img/Bookshelf/bio_color.png" class="color-layer bio-click-path" onclick="openSoon()">
+        <img src="img/Bookshelf/phy_color.png" class="color-layer phy-click-path" onclick="openSoon()">
+        <img src="img/Bookshelf/chem_color.png" class="color-layer chem-click-path" onclick="openSoon()">
+        <img src="img/Bookshelf/eng_color.png" class="color-layer eng-click-path" onclick="openSoon()">
+    </div>
+
+    <div id="soon-modal" class="modal" onclick="closeSoon()">
+        <div class="modal-content"><p>soon</p></div>
+    </div>
+</body>
+</html>
